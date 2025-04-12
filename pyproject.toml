@@ -1,0 +1,32 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "ratechaser_ai"
+version = "0.0.1"
+description = "building an agentic AI to read and parse product data"
+authors = [
+  { name = "AJ Duncanson" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+requires-python = "~=3.10.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["ratechaser_ai"]
+include = ["pyproject.toml", "ratechaser_ai/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["ratechaser_ai"]
+force-sort-within-sections = true
+
